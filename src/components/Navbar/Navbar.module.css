@@ -12,3 +12,11 @@
 .item a.activeLink {
   color: darkcyan;
 }
+
+.friends {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  text-align: center;
+}
