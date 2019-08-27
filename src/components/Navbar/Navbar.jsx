@@ -3,7 +3,7 @@ import s from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 import Friend from "./Friend/Friend";
 
-const Navbar = (props) => {
+const Navbar = props => {
   return (
     <nav className={s.nav}>
       <div className={s.item}>
@@ -32,15 +32,16 @@ const Navbar = (props) => {
         </NavLink>
       </div>
 
-        <div className={s.item}>
-            <NavLink to="/friend" activeClassName={s.activeLink}>
-                Friends</NavLink>
-            <div className={s.friends}>
-                {props.state.friends.map(friend => <Friend name={friend.name} />)}
-            </div>
-
+      <div className={s.item}>
+        <NavLink to="/friend" activeClassName={s.activeLink}>
+          Friends
+        </NavLink>
+        <div className={s.friends}>
+          {props.state.friends.map(friend => (
+            <Friend name={friend.name} />
+          ))}
         </div>
-
+      </div>
     </nav>
   );
 };
